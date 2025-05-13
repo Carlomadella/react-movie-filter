@@ -11,6 +11,9 @@ const initialFilms = [
 
 function App() {
   const [genre, setGenre] = useState("")
+  const [filteredFilms, setFilteredFilms] = useState(initialFilms)
+
+  
 
   return (
     <>
