@@ -10,6 +10,7 @@ const initialFilms = [
 ]
 
 function App() {
+  const [genre, setGenre] = useState("")
 
   return (
     <>
