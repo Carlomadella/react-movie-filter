@@ -13,7 +13,22 @@ function App() {
 
   return (
     <>
-      
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-12"><h1> Movies </h1></div>
+          <div className="col-12">
+            <ul className="list-group">
+              {filteredFilms.map((movie, index) =>{
+                return(
+                  <li key={index} className='list-group-item'>
+                    {movie.title} - {movie.genre}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
