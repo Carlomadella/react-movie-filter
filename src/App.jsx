@@ -13,7 +13,20 @@ function App() {
   const [genre, setGenre] = useState("")
   const [filteredFilms, setFilteredFilms] = useState(initialFilms)
 
-  
+  useEffect(() => {
+    // logica funzione di filtraggio
+    if(genre !== "") {
+      // eseguo il filtraggio
+      // applico il metodo filter
+      const selectedMovies = initialFilms.filter(movie => movie.genre === genre)
+      // imopsto il valore sdi filteredFilms con il contenuto del nuovo array
+      setFilteredFilms(selectedMovies)
+    }
+    else{
+      setFilteredFilms(initialFilms)
+    }
+
+  }, [genre])
 
   return (
     <>
