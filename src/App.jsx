@@ -17,6 +17,14 @@ function App() {
         <div className="row">
           <div className="col-12"><h1> Movies </h1></div>
           <div className="col-12">
+            <select className="form-select" value={genre} onChange={(e) => setGenre(e.target.value)}>
+              <option value="">Tutti i generi</option>
+              <option value="Fantascienza">Fantascienza</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Romantico">Romantico</option>
+              <option value="Azione">Azione</option>
+            </select>
+            <hr />
             <ul className="list-group">
               {filteredFilms.map((movie, index) =>{
                 return(
