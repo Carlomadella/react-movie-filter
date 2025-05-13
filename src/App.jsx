@@ -1,7 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+const initialFilms = [
+  { title: 'Inception', genre: 'Fantascienza' },
+  { title: 'Il Padrino', genre: 'Thriller' },
+  { title: 'Titanic', genre: 'Romantico' },
+  { title: 'Batman', genre: 'Azione' },
+  { title: 'Interstellar', genre: 'Fantascienza' },
+  { title: 'Pulp Fiction', genre: 'Thriller' },
+]
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
